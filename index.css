@@ -1,5 +1,5 @@
 h1, h2{
-    font-size: 15px;
+    font-size: 20px;
     color:  #2196F3;
     display: flex;
     text-align: center;
@@ -7,8 +7,10 @@ h1, h2{
 }
 
 .container{
-    background-color: rgb(215, 215, 225);
-    width: 375px;
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
 }
 
 .btn-outline-primary {
@@ -17,10 +19,20 @@ h1, h2{
 }
 
 .btn {
-    font-size: 15px;
+    font-size: 20px;
     width: 100px;
     margin-top: 10%;
     margin-bottom: 10%;
     background-color: transparent;
     border: 2px solid #2196F3;
+}
+
+#resultadoCuota {
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    background-color: #e3f2fd;
+    color: #003366;
 }
