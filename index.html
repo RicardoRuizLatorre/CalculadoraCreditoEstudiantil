@@ -53,7 +53,7 @@
           <div class="col-12">
             <div class="input-group flex-nowrap">
               <div class="input-group-prepend">
-                <span class="input-group-text" id="addon-wrapping">Valor a financial:</span>
+                <span class="input-group-text" id="addon-wrapping">Valor a financiar:</span>
               </div>
               <input type="text" name="nameValorAFinanciar" id="idValorAFinanciar" class="form-control" placeholder="Digite el valor a financiar en pesos colombianos" aria-label="Username" aria-describedby="addon-wrapping">
             </div>
@@ -66,7 +66,7 @@
           <div class="col-12">
             <div class="input-group flex-nowrap">
               <div class="input-group-prepend">
-                <span class="input-group-text" id="addon-wrapping">Taza de interes mensual:</span>
+                <span class="input-group-text" id="addon-wrapping">Tasa de interes mensual:</span>
               </div>
               <input type="text" id="idTasaInteres" class="form-control" placeholder="Digite el porcentaje de la taza de interes mensual" aria-label="Username" aria-describedby="addon-wrapping">
             </div>
@@ -82,33 +82,18 @@
                 <span class="input-group-text" id="addon-wrapping">Numero de cuotas:</span>
               </div>
                 <div>
-                      <select multiple class="form-control" id="idNumeroCuotas">
-                          <option>1</option>
-                          <option>2</option>
-                          <option>3</option>
-                          <option>4</option>
-                          <option>5</option>
-                          <option>6</option>
-                          <option>7</option>
-                          <option>8</option>
-                          <option>9</option>
-                          <option>10</option>
-                          <option>11</option>
-                          <option>12</option>
-                          <option>13</option>
-                          <option>14</option>
-                          <option>15</option>
-                          <option>16</option>
-                          <option>17</option>
-                          <option>18</option>
-                          <option>19</option>
-                          <option>20</option>
-                          <option>21</option>
-                          <option>22</option>
-                          <option>23</option>
-                          <option>24</option>
-
-                      </select>
+                  <select class="form-control" id="idNumeroCuotas">
+                    <option value="" disabled selected>Seleccione el número de cuotas</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="12">12</option>
+                    <option value="24">24</option>
+                  </select>
+                  
                 </div>
             </div>
           </div>
@@ -116,31 +101,40 @@
 
 
         <!-- Fila 5 --> 
-        <!-- Botones: Operadores aritmeticos -->
+        <!-- Botones: Calcular  -->
         <div class="row">
           <div class="col-3"><button type="button" class="btn btn-outline-primary" onclick="calcular()">Calcular</button></div>
-
-          <table class="table table-hover">
-              <thead>
-                <tr>
-                  <th scope="col">No de Cuota</th>
-                  <th scope="col">Capital</th>
-                  <th scope="col">Interes corriente</th>
-                  <th scope="col">Saldo</th>
-                  <th scope="col">Cuota mensual</th>
-                </tr>
-              </thead>
-        
-          </table>
-
         </div>
 
-    
-
-
-
-
+         <!-- Fila 6 --> 
+        <div class="row">
+          <div class="col-12">
+              <h2>Resultado:</h2>
+              <p id="resultadoCuota" class="alert alert-info">Aquí aparecerá el valor de la cuota.</p>
+          </div>
       </div>
-    </section>
+
+        <!-- Fila 7: Tabla de amortización -->
+<div class="row">
+  <div class="col-12">
+      <h2>Desglose de Pagos</h2>
+      <table class="table table-striped" id="tablaAmortizacion">
+          <thead>
+              <tr>
+                  <th>Cuota</th>
+                  <th>Interés</th>
+                  <th>Capital</th>
+                  <th>Total a Pagar</th>
+                  <th>Saldo Restante</th>
+              </tr>
+          </thead>
+          <tbody>
+              <!-- Aquí se insertarán las filas con el desglose -->
+          </tbody>
+      </table>
+  </div>
+</div>
+
+
   </body>
 </html>
